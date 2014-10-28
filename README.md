@@ -1,6 +1,6 @@
-hello-world
+Homework1-classes-
 ===========
 
-MyFirstRepository
+Stuff about Gods and Goddesses
 
-I'm a creep
+Some freaky things
