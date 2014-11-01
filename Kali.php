@@ -1,20 +1,19 @@
 <?php
 
-class Kali extends Gods implements GodsInterface
+class Kali extends AbstractGods implements GodsInterface
 {
-    public function initialization($gender, $arms, $side)
+    public function behaviour()
     {
-        $this->initialization($gender, $arms, $side);
-    }
-
-    public function  behaviour($action)
-    {
-        return $action;
+        $action = 'Kali is %s and has %s arms. %s';
+        $gender = $this->getGender();
+        $arms = $this->getArms();
+        $side = $this->getSide();
+        return sprintf($action, $gender, $arms, $side);
     }
 
     public function MakeMiracles()
     {
-        echo "Boo! ";
+        echo "The most Boo! ";
     }
 
 }

@@ -1,15 +1,14 @@
 <?php
 
-class Perun extends Gods implements GodsInterface
+class Perun extends AbstractGods implements GodsInterface
 {
-    public function initialization($gender, $arms, $side)
+    public function behaviour()
     {
-        $this->initialization($gender, $arms, $side);
-    }
-
-    public function  behaviour($action)
-    {
-        return $action;
+        $action = 'Perun is %s and has %s arms. %s';
+        $gender = $this->getGender();
+        $arms = $this->getArms();
+        $side = $this->getSide();
+        return sprintf($action, $gender, $arms, $side);
     }
 
     public function MakeMiracles()
